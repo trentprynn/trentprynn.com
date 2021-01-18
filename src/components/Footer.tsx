@@ -1,19 +1,23 @@
 import styled from "styled-components";
 
+const FooterContainer = styled.footer`
+    padding: 1em;
+`
+
 const Copyright = styled.footer`
-  text-align: center;
-  color: palevioletred;
+    text-align: center;
+    color: palevioletred;
 `;
 
 function Footer() {
     return (
-        <footer>
+        <FooterContainer>
             <small>
                 <Copyright>
                     &copy; Copyright 2021
-                </Copyright>
+        </Copyright>
             </small>
-        </footer>
+        </FooterContainer>
     );
 }
 

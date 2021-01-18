@@ -1,27 +1,39 @@
 import Layout from "./components/Layout";
 import styled from "styled-components";
-
-const DisplayArea = styled.div`
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height: 100vh;
-`
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Name = styled.h1`
-  text-align: center;
   color: palevioletred;
+  text-align: center;
+`
+
+const Button = styled.button`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  margin: auto;
+  display: block;
+  padding: 0.25em;
 `
 
 function App() {
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+
   return (
-    <DisplayArea>
-      <Layout>
+    <Layout>
+      <div>
         <Name>
           Trent Prynn
         </Name>
-      </Layout>
-    </DisplayArea>
+        {isAuthenticated ? (
+          <Button onClick={() => logout({ returnTo: window.location.origin })}>Log Out</Button>
+        ) :
+        (
+          <Button onClick={() => loginWithRedirect()}>Log In</Button>
+        )}
+      </div>
+    </Layout>
   );
 }
 
