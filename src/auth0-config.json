@@ -1,4 +1,5 @@
 {
   "domain": "trentprynn.us.auth0.com",
-  "clientId": "zI46OaSPtt2muEXFXboAJ28WgVkl86Lb"
+  "clientId": "zI46OaSPtt2muEXFXboAJ28WgVkl86Lb",
+  "audience": "https://trentprynn.herokuapp.com/"
 }
