@@ -6,7 +6,7 @@ import config from "./auth0-config.json";
 const Name = styled.h1`
   color: palevioletred;
   text-align: center;
-`
+`;
 
 const Button = styled.button`
   background: transparent;
@@ -19,26 +19,38 @@ const Button = styled.button`
   margin-bottom: 1em;
   display: block;
   padding: 0.25em;
-`
+`;
 
 function App() {
-  const { loginWithRedirect, logout, isAuthenticated, getAccessTokenSilently } = useAuth0();
+  const {
+    loginWithRedirect,
+    logout,
+    isAuthenticated,
+    getAccessTokenSilently,
+  } = useAuth0();
 
   return (
     <Layout>
       <div>
-        <Name>
-          Trent Prynn
-        </Name>
+        <Name>Trent Prynn</Name>
         {isAuthenticated ? (
-          <Button onClick={() => logout({ returnTo: window.location.origin })}>Log Out</Button>
-        ) :
-        (
+          <Button onClick={() => logout({ returnTo: window.location.origin })}>
+            Log Out
+          </Button>
+        ) : (
           <Button onClick={() => loginWithRedirect()}>Log In</Button>
         )}
-        {isAuthenticated && 
-        <Button onClick={async () => console.log(await getAccessTokenSilently({audience: config.audience}))}>Print JWT to Log</Button>
-        }
+        {isAuthenticated && (
+          <Button
+            onClick={async () =>
+              console.log(
+                await getAccessTokenSilently({ audience: config.audience })
+              )
+            }
+          >
+            Print JWT to Log
+          </Button>
+        )}
       </div>
     </Layout>
   );
