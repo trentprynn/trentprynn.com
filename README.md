@@ -13,4 +13,4 @@ yarn start
 
 ## Deployment
 
-On a push to master a GitHub Action will run and deploy to GitHub Pages
+On a push to master a GitHub Action will run and a production build will be deployed to GitHub Pages
