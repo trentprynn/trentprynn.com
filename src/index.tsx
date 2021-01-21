@@ -1,21 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import config from "./auth0-config.json";
-import { Auth0Provider } from "@auth0/auth0-react";
+import './index.css';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+
+import App from './App';
+import { AuthProvider, GraphQLProvider } from "./providers";
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Auth0Provider
-      domain={config.domain}
-      clientId={config.clientId}
-      audience={config.audience}
-      redirectUri={window.location.origin}
-    >
-      <App />
-    </Auth0Provider>
+    <AuthProvider>
+      <GraphQLProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </GraphQLProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
