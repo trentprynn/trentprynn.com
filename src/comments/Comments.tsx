@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Spinner } from "../components";
+
 import { gql, useQuery } from "@apollo/client";
 
 const CommentsArea = styled.div`
@@ -42,8 +44,8 @@ function Comments() {
 
   const { loading, error, data } = useQuery<CommentData>(GET_COMMENTS);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error! {error.message}</div>;
+  if (loading) return <Spinner />;
+  if (error) return <CommentsArea> <Item>Error! {error.message}</Item></CommentsArea>;
 
   return (
     <div>
