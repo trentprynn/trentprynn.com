@@ -17,21 +17,13 @@ export const GraphQLProvider = ({ children }: any) => {
   });
 
   const authLink = setContext(async (_, { headers }) => {
-    
-    if (!isAuthenticated) {
-      return {
-        headers: {
-          ...headers,
-        },
-      };
-    }
 
-    const token = await getAccessTokenSilently();
+    const token = isAuthenticated ? await getAccessTokenSilently() : null;
 
     return {
       headers: {
         ...headers,
-        authorization: token ? `Bearer ${token}` : "",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
     };
   });
