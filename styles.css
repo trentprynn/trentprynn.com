@@ -1,8 +1,29 @@
 body {
+    color: #222;
+    background: #e1e1e1;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
 }
 
+a {
+    color: #039be5;
+}
+  
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #eee;
+        background: #18232c;
+    }
+
+    body a {
+        color: #dc7092;
+    }
+
+    svg {
+        filter: invert(73%) sepia(19%) saturate(3576%) hue-rotate(297deg) brightness(89%) contrast(93%);
+    }
+}
+  
 .social-link {
     margin-right: 15px;
     display: inline-block;
