@@ -1,0 +1,26 @@
+{
+    "name": "Trent Prynn",
+    "short_name": "Trent Prynn",
+    "description": "Trent Prynn's personal website",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "type": "image/x-icon",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/assets/images/logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/images/logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "display": "browser",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
