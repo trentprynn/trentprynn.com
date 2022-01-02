@@ -1,52 +1,63 @@
 body {
-    color: #222;
-    background: #e1e1e1;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
+  background: #fff9f9;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
 }
 
 a {
-    color: #039be5;
+  color: #dc7092;
+  text-decoration: none;
 }
-  
+
+a:hover {
+  text-decoration: underline;
+}
+
 @media (prefers-color-scheme: dark) {
-    body {
-        color: #eee;
-        background: #18232c;
-    }
-
-    body a {
-        color: #dc7092;
-    }
-
-    svg {
-        filter: invert(73%) sepia(19%) saturate(3576%) hue-rotate(297deg) brightness(89%) contrast(93%);
-    }
+  body {
+      color: #eee;
+      background: #18232c;
+ }
+  svg {
+      filter: invert(73%) sepia(19%) saturate(3576%) hue-rotate(297deg) brightness(89%) contrast(93%);
+ }
 }
-  
+
 .social-link {
-    margin-right: 15px;
-    display: inline-block;
+  margin-right: 1em;
+  display: inline-block;
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    max-width: 720px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
   }
 }
