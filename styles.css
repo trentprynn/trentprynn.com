@@ -1,5 +1,6 @@
 body {
-  background: #fff9f9;
+  background: #18232c;
+  color: #eee;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
@@ -13,14 +14,8 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-      color: #eee;
-      background: #18232c;
- }
-  svg {
-      filter: invert(73%) sepia(19%) saturate(3576%) hue-rotate(297deg) brightness(89%) contrast(93%);
- }
+svg {
+  filter: invert(73%) sepia(19%) saturate(3576%) hue-rotate(297deg) brightness(89%) contrast(93%);
 }
 
 .social-link {
