@@ -1,0 +1,16 @@
+{
+  "name": "trentprynn.com",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "yarn run http-server src/"
+  },
+  "author": {
+    "name": "Trent Prynn",
+    "email": "trentprynn@gmail.com",
+    "url": "https://trentprynn.com/"
+  },
+  "private": true,
+  "dependencies": {
+    "http-server": "14.1.1"
+  }
+}
