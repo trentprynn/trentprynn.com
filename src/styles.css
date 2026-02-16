@@ -14,13 +14,36 @@ a:hover {
   text-decoration: underline;
 }
 
-svg {
-  filter: invert(73%) sepia(19%) saturate(3576%) hue-rotate(297deg) brightness(89%) contrast(93%);
+.profile-name {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.9em;
+  align-items: center;
 }
 
 .social-link {
-  margin-right: 1em;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.section-title {
+  font-size: 1.45rem;
+  margin-top: 1.1em;
+  margin-bottom: 0.45em;
 }
 
 .content-item + .content-item {
@@ -48,16 +71,16 @@ svg {
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 900px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 980px;
   }
 }
 @media (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    max-width: 1040px;
   }
 }
