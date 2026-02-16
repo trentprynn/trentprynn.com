@@ -23,8 +23,8 @@ svg {
   display: inline-block;
 }
 
-.project-section {
-  margin-bottom: 15px;
+.content-item + .content-item {
+  margin-top: .5em;
 }
 
 .container {
