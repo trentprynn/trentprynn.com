@@ -11,6 +11,18 @@
     <meta property="og:description" content="Trent Prynn is a software developer currently located in New York, NY. He enjoys full stack web development and is always open to new opportunities." />
     <link rel="apple-touch-icon" href="/assets/images/logo192.png" />
     <link rel="manifest" href="manifest.json" />
+    <script>
+        if (location.hostname === 'trentprynn.com') {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4EPFQ82Q06';
+            document.head.appendChild(script);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-4EPFQ82Q06');
+        }
+    </script>
 
     <link href="styles.css" rel="stylesheet">
 </head>
@@ -21,23 +33,23 @@
     
         <div class="social-links">
             <a href="https://x.com/trentprynn" class="social-link" aria-label="X">
-                <img class="social-icon" src="/assets/icons/x.svg" alt="X">
+                <img class="social-icon" src="/assets/icons/x.svg" alt="">
             </a>
         
             <a href="https://github.com/trentprynn" class="social-link" aria-label="GitHub">
-                <img class="social-icon" src="/assets/icons/github.svg" alt="GitHub">
+                <img class="social-icon" src="/assets/icons/github.svg" alt="">
             </a>
         
             <a href="https://www.instagram.com/trentprynn/" class="social-link" aria-label="Instagram">
-                <img class="social-icon" src="/assets/icons/instagram.svg" alt="Instagram">
+                <img class="social-icon" src="/assets/icons/instagram.svg" alt="">
             </a>
         
             <a href="https://www.linkedin.com/in/trentprynn/" class="social-link" aria-label="LinkedIn">
-                <img class="social-icon" src="/assets/icons/linkedin.svg" alt="LinkedIn">
+                <img class="social-icon" src="/assets/icons/linkedin.svg" alt="">
             </a>
         
             <a href="mailto:trentprynn@gmail.com" class="social-link" aria-label="Email">
-                <img class="social-icon" src="/assets/icons/email.svg" alt="Email">
+                <img class="social-icon" src="/assets/icons/email.svg" alt="">
             </a>
         </div>
     
